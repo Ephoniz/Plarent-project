@@ -1,10 +1,14 @@
 <h2>These are the planets in Andromeda</h2>
 
-<% @planets.each do |planet| %>
 <ul>
-<li>
-<%= link_to planet.name, planet_path(planet)%>          
-</li>
-</ul>
+  <% @planets.each do |planet| %>
+  <li>
+    <%= link_to planet.name, planet_path(planet)%>
+    <%= link_to  "edit", edit_planet_path(planet) %>
+    <%= link_to  "remove", planet_path(planet), method: :delete %>         
+  </li>
   <% end %>
+</ul>
+
+  <%= link_to  "create", new_planet_path %>
 </div>
