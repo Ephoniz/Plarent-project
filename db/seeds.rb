@@ -17,4 +17,5 @@ GALAXIES = %w[milkyway andromeda ic1101 tadpole]
                 galaxy: GALAXIES.sample,
                 price: Faker::Number.number(digits: 4),
                 owner: User.first)
+  
 end
