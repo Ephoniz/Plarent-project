@@ -1,0 +1,10 @@
+<h2>These are the planets in Andromeda</h2>
+
+<% @planets.each do |planet| %>
+<ul>
+<li>
+<%= link_to planet.name, planet_path(planet)%>          
+</li>
+</ul>
+  <% end %>
+</div>
