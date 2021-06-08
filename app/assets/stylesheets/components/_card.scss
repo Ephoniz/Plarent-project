@@ -1,0 +1,62 @@
+.card-planet {
+  overflow: hidden;
+  color: black;
+  height: 180px;
+  background: white;
+  box-shadow: 0px 0px 5.07625px rgba(0, 0, 0, 0.25);
+  border-radius: 5.07625px;
+  display: flex;
+  align-items: center;
+  left: 0%;
+  right: 27.34%;
+  top: 0%;
+  bottom: -27.68%
+  
+  
+}
+
+.card-planet img {
+  padding-left: 5px;
+  height: 60%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-planet h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-planet p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-planet .card-planet-info {
+  padding: 14px;
+}
+.cards{
+  flex-grow: 1;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap: 28px;
+  padding: 15px;
+}
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.container{
+  display: flex;
+}

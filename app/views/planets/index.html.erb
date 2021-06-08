@@ -1,10 +1,18 @@
-<h2>These are the planets in Andromeda</h2>
-
-<% @planets.each do |planet| %>
-<ul>
-<li>
-<%= link_to planet.name, planet_path(planet)%>          
-</li>
-</ul>
-  <% end %>
+<div class="index-background">
+<h2>These are all the planets in the universe </h2>
+<div class="main-container">
+  <div class="cards">
+    <% @planets.each do |planet| %>
+    <div class="card-planet">
+      <img src="assets/planet.png" />
+      <div class="card-planet-info">
+      <h2> <%= planet.name%> </h2> 
+      <p>Welcome to the galaxy of <%= planet.galaxy%>. In this spacious planet of <%= planet.radius%> Km, with nice temperatures of <%=planet.temperature%> ºC you will fully enjoy the <%=planet.atmosphere%> atmosphere.</p>  
+      </div> 
+       <%= link_to 'information', planet_path(planet), class: 'btn-blue-transparent'%> 
+    </div>
+    
+    <% end %>
+  </div>
+</div>
 </div>
