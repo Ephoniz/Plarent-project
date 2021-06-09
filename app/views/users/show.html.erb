@@ -1,0 +1,16 @@
+<h1>My profile</h1>
+
+<%current_user.planets.each do |planet|%>
+  <div class="my-planets-card">
+  <img src="https://www.nicepng.com/png/detail/7-79850_15-png-planets-for-free-download-on-mbtskoudsalg.png" alt="A">
+  <div class="my-planets-card-content">
+    <h2><%= planet.name %></h2>
+    <p><%= planet.galaxy %></p>
+    <p><%= planet.description %></p>
+  </div>
+  <div class="my-planets-card-actions">
+    <%= link_to  "Delete", planet_path(planet), method: :delete, class: 'delete-text' %>
+    <%= link_to  "Edit", edit_planet_path, class: 'edit-text' %>
+  </div>
+  </div>
+<%end%>
