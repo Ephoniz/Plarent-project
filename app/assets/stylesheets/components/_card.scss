@@ -65,9 +65,11 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
 }
 .card-planet-page h1{
-  text-align: left;
+ 
   color: white;
   padding: 20px;
   font-family: Roboto;
@@ -79,45 +81,42 @@ line-height: 75px;
 
 }
 .card-dates{
-display: block;
-height: 100vh;
-top: 5;
+display: flex;
+height: 50vh;
+width: 300px;
+padding: 150px;
+    
+top: 5px;
 position: sticky;
-left: 960px;
-bottom: 882px;
-width: 280px;
-height: 500px;
 background: #FF2C55;
 box-shadow: 0px 0px 24.9383px rgba(0, 0, 0, 0.62);
 border-radius: 6.65021px;
-
+align-items: center;
+justify-content: center;
+}
+.card-dates h2{
+  text-align: center;
 }
 
 .card-carrousel{
 
 display:flex;
-width: 900px;
+width: 100%;
 height: 247px;
-left: 60px;
-top: 635px;
-margin-top: 26px;
-margin-left: 20px;
-margin-bottom: 20px;
+
 background: #FFFFFF;
 border-radius: 8px;
 }
 
 .card-planet-text {
-  width: 70%;
   padding: 20px;
 }
 
 .card-planet-text p {
 display: flex;
 text-align: left;
-width: 90%;
+
 margin: 0 auto;
-height: 599px;
 left: 65px;
 top: 921px;
 font-family: Arial, Helvetica, sans-serif;
