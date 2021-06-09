@@ -18,7 +18,7 @@
   <div class="col-10">
     <div class="cards">
       <% @planets.each do |planet| %>
-        <%= link_to(p) do%>
+        <%= link_to(planet) do%>
         <div class="card-planet">
           <img src="<%= image_path("planet.png")  %>" />
           <div class="card-planet-info">
