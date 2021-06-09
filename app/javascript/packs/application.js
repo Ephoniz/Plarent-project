@@ -8,33 +8,33 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+// External imports
+import "bootstrap";
+import Flickity from "flickity";
+
+
+
+// Internal imports, e.g:
+// import { initSelect2 } from '../components/init_select2';
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+document.addEventListener('turbolinks:load', () => {
+  const elem = document.querySelector('.main-carousel');
+  const flkty = new Flickity( elem, {
+    // options
+    wrapAround: true,
+    groupCells: true,
+    freeScroll: true,
+    cellAlign: 'left'
+
+  });
+});
 
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
-
-// External imports
-import "bootstrap";
-import Flickity from "flickity";
-
-const elem = document.querySelector('.main-carousel');
-const flkty = new Flickity( elem, {
-  // options
-  wrapAround: true,
-  groupCells: true,
-  freeScroll: true,
-  cellAlign: 'left'
-
-});
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
-document.addEventListener('turbolinks:load', () => {
-  
-});
