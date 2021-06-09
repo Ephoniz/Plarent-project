@@ -1,7 +1,24 @@
-<%= render 'shared/navbar' %>
-
 <div class="main-banner">
   This is the banner
+</div>
+
+<div class="home-container">
+  <h2>Take a look at this week's top rated planets!</h2>
+  <div class="main-carousel">
+    <% @planets.each do |p|%>
+      <div class="carousel-cell">
+        <%= link_to(p) do%> 
+          <div class="card-planet">
+            <img src="assets/planet.png">
+            <div class="card-planet-info">
+            <h2> <%= p.name%> </h2> 
+            <p>Welcome to the galaxy of <%= p.galaxy%>. In this spacious planet of <%= p.radius%> Km, with nice temperatures of <%=p.temperature%> ºC you will fully enjoy the <%=p.atmosphere%> atmosphere.</p>  
+            </div>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
 </div>
 
 <%= render 'shared/footer'%>
