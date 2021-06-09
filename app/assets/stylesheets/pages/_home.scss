@@ -28,6 +28,30 @@ body{
   margin-bottom: 50px;
 }
 
+.search_galaxy {
+  margin: 0;
+}
+
+#search_galaxy {
+  border-radius: 8px;
+  width: 100%;
+  height: 3em;
+}
+
 .home-container a{
   text-decoration: none;
+}
+
+.input-size {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-content h1{
+  margin-bottom: 30px;
 }
