@@ -20,7 +20,7 @@
       <% @planets.each do |planet| %>
         <%= link_to(p) do%>
         <div class="card-planet">
-          <img src="assets/planet.png" />
+          <img src="<%= image_path("planet.jpg")  %>" />
           <div class="card-planet-info">
             <h2> <%= planet.name%> </h2> 
             <p>Welcome to the galaxy of <%= planet.galaxy%>. In this spacious planet of <%= planet.radius%> Km, with nice temperatures of <%=planet.temperature%> ºC you will fully enjoy the <%=planet.atmosphere%> atmosphere.</p>  

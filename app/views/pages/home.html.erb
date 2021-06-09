@@ -19,7 +19,7 @@
       <div class="carousel-cell">
         <%= link_to(p) do%> 
           <div class="card-planet">
-            <img src="assets/planet.png">
+            <img src="<%= image_path("planet.jpg")  %>">
             <div class="card-planet-info">
             <h2> <%= p.name%> </h2> 
             <p>Welcome to the galaxy of <%= p.galaxy%>. In this spacious planet of <%= p.radius%> Km, with nice temperatures of <%=p.temperature%> ºC you will fully enjoy the <%=p.atmosphere%> atmosphere.</p>  
