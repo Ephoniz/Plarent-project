@@ -16,17 +16,16 @@
   object-fit: cover;
 }
 
-.card-planet h2 {
+.card-planet .card-planet-info h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 8px;
 }
 
 .card-planet p {
   font-size: 12px;
-  line-height: 1.4;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .card-planet .card-planet-info {
@@ -50,3 +49,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+.card-planet:hover {
+  box-shadow: inset 0px 0px 30px #ff446a9f;
+}
+
