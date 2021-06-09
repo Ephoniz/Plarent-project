@@ -1,0 +1,29 @@
+<%= simple_form_for(planet) do |form| %>
+  <% if planet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(planet.errors.count, "error") %> prohibited this planet from being saved:</h2>
+
+      <ul>
+        <% planet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.input :name %>
+
+    <%= form.input :atmosphere, :collection => %w[oxygen nitrogen carbon_dioxide argon] %>
+
+    <%= form.input :galaxy, :collection => %w[milkyway andromeda ic1101 tadpole] %>
+
+    <%= form.input :price %>
+
+    <%= form.input :radius %>
+
+    <%= form.input :temperature %>
+
+    <%= form.input :description %>
+
+    <%= form.button :submit %>
+<% end %>

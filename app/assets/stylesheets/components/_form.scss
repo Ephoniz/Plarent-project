@@ -1,0 +1,35 @@
+
+.form-box {
+  background-color: #1C2541;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 0.5px solid #ACC0FF;;
+  box-sizing: border-box;
+  color: #FF2C55;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.form-inputs {
+  color: #ACC0FF;
+  text-align: left;
+}
+
+
+.form-actions > input {
+  width: 100%;
+}
+
+.form-box a{
+  color: #ACC0FF;
+}
+
+.forms-container {
+  width: 80%;
+  display: flex;
+  margin: 100px auto;
+  justify-content: center;
+  align-items: center;
+}

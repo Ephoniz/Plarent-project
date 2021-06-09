@@ -20,11 +20,21 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
+import Flickity from "flickity";
+
+const elem = document.querySelector('.main-carousel');
+const flkty = new Flickity( elem, {
+  // options
+  wrapAround: true,
+  groupCells: true,
+  freeScroll: true,
+  cellAlign: 'left'
+
+});
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  
 });
