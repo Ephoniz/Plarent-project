@@ -60,3 +60,54 @@
 .container{
   display: flex;
 }
+
+.card-planet-page{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.card-planet-page h1{
+  text-align: left;
+  color: white;
+  
+
+}
+.card-carrousel{
+
+display:flex;
+width: 900px;
+height: 247px;
+left: 60px;
+top: 635px;
+margin-top: 26px;
+margin-left: 20px;
+margin-bottom: 20px;
+background: #FFFFFF;
+border-radius: 8px;
+}
+
+.card-planet-text {
+
+}
+
+.card-dates{
+display: flex;
+position: relative;
+left: 960px;
+bottom: 268px;
+width: 280px;
+height: 500px;
+background: #FF2C55;
+box-shadow: 0px 0px 24.9383px rgba(0, 0, 0, 0.62);
+border-radius: 6.65021px;
+
+}
+.card-review{
+  
+}
