@@ -1,2 +1,36 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+.index-main-container {
+  width: 98%;
+  margin: 100px auto;
+}
+
+.index-filters {
+  padding: 20px;
+  border-radius: 5px;
+  color: #00D9CA;
+  height: 300px;
+  background-color: #1C2541;
+}
+
+.index-filters h2{
+  font-weight: bold;
+}
+
+.filters-box {
+  width: 100%;
+}
+
+.index-title{
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#search_radius {
+  margin-top: 15px;
+  border-radius: 8px;
+}
+

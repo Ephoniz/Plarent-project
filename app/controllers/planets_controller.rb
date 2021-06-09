@@ -2,7 +2,8 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: %i[show edit update]
 
   def index
-    @planets = Planet.all
+    @filter = PlanetFilter.new(params)
+    @planets = @filter.filter!
   end
 
   def show

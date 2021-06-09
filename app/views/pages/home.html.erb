@@ -1,5 +1,15 @@
 <div class="main-banner">
-  This is the banner
+  <div class="header-content">
+    <h1>Select the galaxy of your dreamed planet</h1>
+    <div class="header-input">
+      <%= simple_form_for :search, url: planets_path, method: :get do |f| %>
+      <div class="form-group d-flex input-size">
+        <%= f.input :galaxy, collection: %w[milkyway andromeda ic1101 tadpole], label: false, prompt: 'Select your galaxy'%>
+        <%= f.submit 'GO!', name: nil, class: 'red-btn' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <div class="home-container">
