@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_08_085518) do
+ActiveRecord::Schema.define(version: 2021_06_08_105713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "planet_id", null: false
+    t.date "date_start"
+    t.date "date_end"
+    t.boolean "accepted", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["planet_id"], name: "index_bookings_on_planet_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.integer "radius"
+    t.string "atmosphere"
+    t.float "temperature"
+    t.text "description"
+    t.string "galaxy"
+    t.float "price"
+    t.boolean "available", default: true
+    t.bigint "owner_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["owner_id"], name: "index_planets_on_owner_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,4 +56,6 @@ ActiveRecord::Schema.define(version: 2021_06_08_085518) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "planets"
+  add_foreign_key "bookings", "users"
 end
