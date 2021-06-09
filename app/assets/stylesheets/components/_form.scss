@@ -4,11 +4,10 @@
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
-  border: 4px solid #ACC0FF;
+  border: 0.5px solid #ACC0FF;;
   box-sizing: border-box;
   color: #FF2C55;
-  border-radius: 5%;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -19,13 +18,18 @@
 }
 
 
-.form-actions {
-  color: white;
-  padding: 5px 10px;
-  font-size: 17px;
-  background-color: #FF2C55;
-  border: 2px solid #FF2C55;
-  border-radius: 6px;
+.form-actions > input {
   width: 100%;
-  text-align: center;
+}
+
+.form-box a{
+  color: #ACC0FF;
+}
+
+.forms-container {
+  width: 80%;
+  display: flex;
+  margin: 100px auto;
+  justify-content: center;
+  align-items: center;
 }

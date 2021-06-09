@@ -1,21 +1,16 @@
 
 .topnav {
+  display: flex;
   background-color: #1C2541;
+  align-items: center;
   overflow: hidden;
+  height: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* Style the links inside the navigation bar */
-.topnav > .red-btn {
-  margin: 10px 5px;
 
-}
-
-
-.topnav a {
-  float: left;
+.title-plarent {
   color: #FF2C55;
-  text-align: center;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-size: 17px;
 }

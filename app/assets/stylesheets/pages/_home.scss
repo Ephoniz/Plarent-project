@@ -2,6 +2,7 @@
 body{
   background-color: #080E20;
   color: white;
+  align-items: center;
 }
 
 .main-banner {
@@ -12,4 +13,21 @@ body{
   justify-content: center;
   align-items: center;
   color: white;
+  margin-bottom: 100px;
+}
+
+.home-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-container h2{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.home-container a{
+  text-decoration: none;
 }
