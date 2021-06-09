@@ -2,7 +2,7 @@
   <a class="title-plarent" href="/">Plarent</a>
   <div class="navbar-buttons">
   <% if current_user.present? %>
-    <%= link_to  "My planets", planets_path, class: 'red-btn' %>
+    <%= link_to  "My planets", user_path(current_user), class: 'red-btn' %>
     <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'red-btn'%>
   <% else %>
     <%= link_to  "Sign in", new_user_session_path, class: 'red-btn' %>
