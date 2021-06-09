@@ -1,12 +1,21 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+
+.topnav {
+  background-color: #1C2541;
+  overflow: hidden;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+/* Style the links inside the navigation bar */
+.topnav > .red-btn {
+  margin: 10px 5px;
+
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+.topnav a {
+  float: left;
+  color: #FF2C55;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 17px;
 }
