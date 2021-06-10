@@ -10,18 +10,12 @@
 
     <div class="profile-container">
       <div class="header">
-        <h1>My profile</h1>
-
+        <h1>Owned Planets</h1>
       </div>
-      <div class="cards-section">
-        <h2>Rented Planets</h2>
-
       </div>
-    </div>
 
 
-
-<div class="main-carousel">
+<div class="main-carousel profile-page">
     <% current_user.planets.each do |planet|%>
       <div class="carousel-cell">
         <div class="my-planets-card">
@@ -41,4 +35,27 @@
       </div>
     <%end%>
   </div>
+<div class="profile-container">
+  <div class="header">
+    <h1>Rented Planets</h1>
+  </div>
 </div>
+
+
+<div class="main-carousel2 profile-page">
+    <% current_user.planets.each do |planet|%>
+      <div class="carousel-cell">
+        <div class="my-planets-card">
+            <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+            <div class="my-planets-card-content">
+              <div class="my-planets-text">
+                <h2><%= planet.name %></h2>
+                <p><%= planet.galaxy %></p>
+                <p><%= planet.description %></p>
+              </div>
+            </div>
+          </div>
+      </div>
+    <%end%>
+  </div>
+

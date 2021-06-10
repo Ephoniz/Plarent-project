@@ -10,7 +10,7 @@
   border-style: solid;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin-top: 30px;
   padding: 20px;
 
@@ -23,6 +23,7 @@
   border: 1px solid #FF2C55;
   image-position: center;
   image-fit: cover;
+  margin-right: 160px;
 }
 
 .profil-name-email {
@@ -53,6 +54,10 @@
   grid-template-columns:1fr 1fr;
   grid-gap: 28px;
   padding: 15px;
+}
+
+.profile-page .my-planets-card {
+  width: 100% !important;
 }
 @media(max-width: 992px) {
   .my-planets-card {
@@ -99,8 +104,12 @@
   text-decoration: none;
 }
 
-.header {
-  width: 20%;
+.header h1 {
+  width: 100%;
+  justify-content: center;
+  margin-top: 15px;
+  color: #FF2C55;
+
 }
 
 .cards-section {
@@ -113,8 +122,12 @@
 }
 
 .profile-container {
-  width: 95%;
+  width: 30%;
   margin: 30px auto;
   display: flex;
+}
+
+.carousel-cell {
+  margin: 10px;
 }
 

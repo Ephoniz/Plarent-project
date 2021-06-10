@@ -26,10 +26,16 @@ document.addEventListener('turbolinks:load', () => {
   const elem = document.querySelector('.main-carousel');
   const flkty = new Flickity( elem, {
     // options
-    wrapAround: true,
-    groupCells: true,
-    freeScroll: true,
-    cellAlign: 'left'
+  freeScroll: true,
+  wrapAround: true
+
+  });
+
+    const elem2 = document.querySelector('.main-carousel2');
+  const flkty2 = new Flickity( elem2, {
+    // options
+  freeScroll: true,
+  wrapAround: true
 
   });
 
