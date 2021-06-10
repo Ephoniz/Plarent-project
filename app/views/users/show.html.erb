@@ -2,7 +2,6 @@
 <div class="header">
   <h1>My profile</h1>
 </div>
-
   <%= cl_image_tag current_user.profile_picture.key, height: 300, width: 400, crop: :fill %>
 <%current_user.planets.each do |planet|%>
   <div class="my-planets-card">
