@@ -11,15 +11,35 @@
     </div>
 
     <div class="card-planet-text">
-      <p> A lot of description text and things for thes awesome planet. Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".[16][17] The latter refers to the effect of the iron oxide prevalent on Mars's surface, 
-      which gives it a reddish appearance distinctive among the astronomical bodies visible to the naked eye.[18] Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the impact craters of the Moon and the valleys, deserts and polar ice caps of Earth.
-      </p>
-      <p> A lot of description text and things for thes awesome planet. Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".[16][17] The latter refers to the effect of the iron oxide prevalent on Mars's surface, 
-      which gives it a reddish appearance distinctive among the astronomical bodies visible to the naked eye.[18] Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the impact craters of the Moon and the valleys, deserts and polar ice caps of Earth.
-      </p>
-      <p> A lot of description text and things for thes awesome planet. Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".[16][17] The latter refers to the effect of the iron oxide prevalent on Mars's surface, 
-      which gives it a reddish appearance distinctive among the astronomical bodies visible to the naked eye.[18] Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the impact craters of the Moon and the valleys, deserts and polar ice caps of Earth.
-      </p>
+      <div class="container-owner border-bottom "> 
+       <h3> <i class="fas fa-user-astronaut"></i> Book <%= @planet.name%> own by <%= @planet.owner%></h3>
+      </div>
+    <div class="card-information-planet">
+      <div class="container-galaxy"> 
+       <h4> <i class="far fa-star"></i> Galaxy </h4>
+       <p><%= @planet.galaxy%></p>
+      </div>
+      <div class="container-radius"> 
+       <h4> <i class="fas fa-globe"></i> Size </h4>
+        <p><%= @planet.radius%> Km </p>
+      </div>
+      <div class="container-atmosphere"> 
+       <h4> <i class="fas fa-cloud"></i> Atmosphere</h4>
+        <p><%= @planet.atmosphere%></p>
+      </div>
+      <div class="container-temperature"> 
+       <h4><i class="fas fa-temperature-high"></i> Temperature </h4>
+        <p><%= @planet.temperature%> ºC</p>
+      </div>
+      <div class="container-price"> 
+       <h4> <i class="fas fa-coins"></i> Price </h4>
+        <p><%= @planet.price%> ¥ </p>
+      </div>
+      <div class="container-description border-bottom "> 
+       <h4> <i class="fas fa-info-circle"></i> Description </h4>
+        <p><%= @planet.description%></p>
+      </div>
+    </div>
     </div>
   </div>
 
@@ -37,5 +57,4 @@
 
 </div>
 
-<%= link_to 'Back to planets', planets_path%>
 </div>
