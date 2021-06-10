@@ -10,6 +10,37 @@
   counter-increment: carousel-cell;
 }
 
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+}
+
+.carousel-nav .carousel-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}
+
+
 @media(max-width: 992px) {
   .carousel-cell {
     width: 40%;

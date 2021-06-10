@@ -8,6 +8,7 @@
     "@rails/webpacker": "5.4.0",
     "bootstrap": "4.6",
     "flickity": "^2.2.2",
+    "flickity-as-nav-for": "^2.0.1",
     "hover.css": "^2.3.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
