@@ -17,6 +17,7 @@ body{
 }
 
 .home-container {
+  position: relative;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -58,4 +59,16 @@ body{
 
 a:hover{
   text-decoration: none;
+}
+
+.comet {
+  position: absolute;
+  transform: rotate(15deg);
+  top: 600px;
+  right: 100px;
+}
+
+#home-search {
+  margin-left: 15px;
+  width: 80px;
 }
