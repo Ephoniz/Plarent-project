@@ -22,7 +22,7 @@ ActiveStorage.start()
 
 document.addEventListener('turbolinks:load', () => {
   const elem = document.querySelector('.main-carousel');
-  const flkty = new Flickity( elem, {
+  const flkty = new Flickity(elem, {
     // options
     wrapAround: true,
     groupCells: true,
@@ -31,13 +31,25 @@ document.addEventListener('turbolinks:load', () => {
 
   });
 
+  const elem2 = document.querySelector('.carousel-main');
+  const elemnav = document.querySelector('.carousel-nav');
+
+  const flkty2 = new Flickity(elem2, {
+    // options
+    wrapAround: true,
+
+    freeScroll: true,
+    cellAlign: 'left'
+  });
+
+
   //JS To move the comet in home Page
   const comet = document.getElementById('comet');
 
   window.addEventListener('scroll', () => {
     const value = window.scrollY;
 
-    comet.style.right = value * 3 +'px';
+    comet.style.right = value * 3 + 'px';
   });
 
   const form = document.querySelector('#booking-form');
