@@ -1,10 +1,14 @@
 <div class="topnav d-flex justify-content-between">
+  <div class="logo-navbar">
+  <img src="<%= image_path 'plarent-logo.png' %>" alt="">
   <%= link_to "PLARENT", root_path, class: 'title-plarent'%>
+  </div>
   <div class="navbar-buttons">
   <% if current_user.present? %>
     <%= link_to "Rent my planet", new_planet_path, class: 'red-btn'%>
     <%= link_to  "My profile", user_path(current_user), class: 'red-btn' %>
     <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'red-btn'%>
+    <%= render 'shared/profile_pic', user: current_user%>
   <% else %>
     <%= link_to  "Sign in", new_user_session_path, class: 'red-btn' %>
   <%end%>

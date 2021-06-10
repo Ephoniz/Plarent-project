@@ -9,10 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 // External imports
-import "bootstrap";
-import Flickity from "flickity";
-
-
+import "bootstrap"
+import Flickity from "flickity"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -41,6 +39,32 @@ document.addEventListener('turbolinks:load', () => {
 
     comet.style.right = value * 3 +'px';
   });
+
+  const form = document.querySelector('#booking-form');
+  const formInputs = form.querySelectorAll('input');
+
+  formInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+      const dateStart = document.querySelector('#booking_date_start');
+      const dateEnd = document.querySelector('#booking_date_end');
+
+      const dateOfStart = new Date(dateStart.value);
+      const dateOfEnd = new Date(dateEnd.value);
+
+      const Difference_In_Time = dateOfEnd.getTime() - dateOfStart.getTime();
+      const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+      const price = document.getElementById('price-per-night');
+      const daysBooked = document.getElementById('days-booked');
+      daysBooked.innerHTML = `${Difference_In_Days} days`
+
+      const totalPrice = price.innerHTML * Difference_In_Days; 
+      const priceToChange = document.getElementById('total-price');
+
+      priceToChange.innerHTML = totalPrice;
+    });
+  });
+  
 });
 
 // ----------------------------------------------------
