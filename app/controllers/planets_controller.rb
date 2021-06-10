@@ -8,6 +8,7 @@ class PlanetsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @user = @planet.owner
   end
 
   def new
@@ -16,7 +17,7 @@ class PlanetsController < ApplicationController
 
   def create
     @planet = Planet.new(planets_params)
-    @planet.owner = current_user
+    
 
     if @planet.save
       redirect_to @planet, notice: 'Planet was successfully created.'
