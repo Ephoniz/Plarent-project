@@ -40,7 +40,7 @@ class PlanetsController < ApplicationController
   def destroy
     @planet = Planet.find(params[:id])
     @planet.destroy
-    redirect_to planets_path, notice: 'Planet was successfully deleted.'
+    redirect_to user_path(current_user), notice: 'Planet was successfully deleted.'
   end
 
   private
