@@ -1,6 +1,55 @@
 
+<div class="index-background">
+<div class="card-planet-page" style="background-image:linear-gradient(180deg, rgba(8, 14, 32, 0.36) 58.85%, #080E20 95.31%), url(<%= image_path 'mars.jpg' %>)">
+  <h1> <%= @planet.name %></h1>
+</div>
 
-<h1> You are in <%= @planet.name %></h1>
+<div class="container d-flex">
+  <div class="left p-4">
+    <div class="card-carrousel">
+    </div>
 
-<%= link_to 'Back to planets', planets_path%>
-  
+    <div class="card-planet-text">
+      <div class="container-owner border-bottom "> 
+       <h3> <i class="fas fa-user-astronaut"></i> Book <%= @planet.name%> own by <%= @planet.owner%></h3>
+      </div>
+    <div class="card-information-planet">
+      <div class="container-galaxy"> 
+       <h4> <i class="far fa-star"></i> Galaxy </h4>
+       <p><%= @planet.galaxy%></p>
+      </div>
+      <div class="container-radius"> 
+       <h4> <i class="fas fa-globe"></i> Size </h4>
+        <p><%= @planet.radius%> Km </p>
+      </div>
+      <div class="container-atmosphere"> 
+       <h4> <i class="fas fa-cloud"></i> Atmosphere</h4>
+        <p><%= @planet.atmosphere%></p>
+      </div>
+      <div class="container-temperature"> 
+       <h4><i class="fas fa-temperature-high"></i> Temperature </h4>
+        <p><%= @planet.temperature%> ºC</p>
+      </div>
+      <div class="container-price"> 
+       <h4> <i class="fas fa-coins"></i> Price </h4>
+        <p><%= @planet.price%> ¥ </p>
+      </div>
+      <div class="container-description border-bottom "> 
+       <h4> <i class="fas fa-info-circle"></i> Description </h4>
+        <p><%= @planet.description%></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<div class="card-dates mt-4">
+<h2>BOOK NOW</h2>
+</div>
+
+
+
+
+
+</div>
+
+</div>

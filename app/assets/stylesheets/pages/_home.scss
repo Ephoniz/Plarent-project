@@ -17,6 +17,7 @@ body{
 }
 
 .home-container {
+  position: relative;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -28,6 +29,46 @@ body{
   margin-bottom: 50px;
 }
 
+.search_galaxy {
+  margin: 0;
+}
+
+#search_galaxy {
+  border-radius: 8px;
+  width: 100%;
+  height: 3em;
+}
+
 .home-container a{
   text-decoration: none;
+}
+
+.input-size {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-content h1{
+  margin-bottom: 30px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.comet {
+  position: absolute;
+  transform: rotate(15deg);
+  top: 600px;
+  right: 100px;
+}
+
+#home-search {
+  margin-left: 15px;
+  width: 80px;
 }

@@ -25,5 +25,8 @@
 
     <%= form.input :description %>
 
-    <%= form.button :submit %>
+    <%= form.input :photos, as: :file, label: "Upload your planet photos", input_html: { multiple: true }%>
+
+
+    <%= form.button :submit, class: 'red-btn' %>
 <% end %>

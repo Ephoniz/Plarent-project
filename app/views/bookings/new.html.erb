@@ -1,0 +1,8 @@
+<%= simple_form_for [@planet, @booking] do |f| %>
+
+    <%= f.input :date_start %>
+
+    <%= f.input :date_end%>
+
+    <%= f.button :submit, class: 'red-btn' %>
+<% end %>

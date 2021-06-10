@@ -2,7 +2,8 @@ class PlanetsController < ApplicationController
   before_action :set_planet, only: %i[show edit update]
 
   def index
-    @planets = Planet.all
+    @filter = PlanetFilter.new(params)
+    @planets = @filter.filter!
   end
 
   def show
@@ -39,7 +40,7 @@ class PlanetsController < ApplicationController
   def destroy
     @planet = Planet.find(params[:id])
     @planet.destroy
-    redirect_to planets_path, notice: 'Planet was successfully deleted.'
+    redirect_to user_path(current_user), notice: 'Planet was successfully deleted.'
   end
 
   private
@@ -49,6 +50,6 @@ class PlanetsController < ApplicationController
   end
 
   def planets_params
-    params.require(:planet).permit(:name, :atmosphere, :galaxy, :radius, :temperature, :price, :description)
+    params.require(:planet).permit(:name, :atmosphere, :galaxy, :radius, :temperature, :price, :description, :owner, photos: [])
   end
 end
