@@ -1,22 +1,61 @@
-<div class="profile-container">
-<div class="header">
-  <h1>My profile</h1>
-</div>
-  <%= cl_image_tag current_user.profile_picture.key, height: 300, width: 400, crop: :fill %>
-<%current_user.planets.each do |planet|%>
-  <div class="my-planets-card">
-    <img src="https://www.nicepng.com/png/detail/7-79850_15-png-planets-for-free-download-on-mbtskoudsalg.png" alt="A">
-    <div class="my-planets-card-content">
-      <div class="my-planets-text">
-        <h2><%= planet.name %></h2>
-        <p><%= planet.galaxy %></p>
-        <p><%= planet.description %></p>
-      </div>
-      <div class="my-planets-card-actions">
-        <%= link_to  "Delete", planet_path(planet), method: :delete, class: 'delete-text' %>
-        <%= link_to  "Edit", edit_planet_path, class: 'edit-text' %>
-      </div>
+
+<div class="profil-details">
+  <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+  <div class="profil-name-email">
+    <h2>Name:</h2>
+    <h2>Email:</h2>
     </div>
   </div>
-<%end%>
 </div>
+
+    <div class="profile-container">
+      <div class="header">
+        <h1>Owned Planets</h1>
+      </div>
+      </div>
+
+
+<div class="main-carousel profile-page">
+    <% current_user.planets.each do |planet|%>
+      <div class="carousel-cell">
+        <div class="my-planets-card">
+            <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+            <div class="my-planets-card-content">
+              <div class="my-planets-text">
+                <h2><%= planet.name %></h2>
+                <p><%= planet.galaxy %></p>
+                <p><%= planet.description %></p>
+              </div>
+              <div class="my-planets-card-actions">
+                <%= link_to  "Delete", planet_path(planet), method: :delete, class: 'delete-text' %>
+                <%= link_to  "Edit", edit_planet_path, class: 'edit-text' %>
+              </div>
+            </div>
+          </div>
+      </div>
+    <%end%>
+  </div>
+<div class="profile-container">
+  <div class="header">
+    <h1>Rented Planets</h1>
+  </div>
+</div>
+
+
+<div class="main-carousel2 profile-page">
+    <% current_user.planets.each do |planet|%>
+      <div class="carousel-cell">
+        <div class="my-planets-card">
+            <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+            <div class="my-planets-card-content">
+              <div class="my-planets-text">
+                <h2><%= planet.name %></h2>
+                <p><%= planet.galaxy %></p>
+                <p><%= planet.description %></p>
+              </div>
+            </div>
+          </div>
+      </div>
+    <%end%>
+  </div>
+
