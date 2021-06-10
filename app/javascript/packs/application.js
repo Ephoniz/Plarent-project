@@ -32,6 +32,15 @@ document.addEventListener('turbolinks:load', () => {
     cellAlign: 'left'
 
   });
+
+  //JS To move the comet in home Page
+  const comet = document.getElementById('comet');
+
+  window.addEventListener('scroll', () => {
+    const value = window.scrollY;
+
+    comet.style.right = value * 3 +'px';
+  });
 });
 
 // ----------------------------------------------------
