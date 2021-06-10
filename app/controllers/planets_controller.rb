@@ -4,6 +4,7 @@ class PlanetsController < ApplicationController
   def index
     @filter = PlanetFilter.new(params)
     @planets = @filter.filter!
+  
   end
 
   def show

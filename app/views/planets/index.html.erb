@@ -10,8 +10,12 @@
     <div class="form-group filters-box">
       <%= f.input :galaxy, collection: %w[milkyway andromeda ic1101 tadpole], label: false, prompt: 'Select your galaxy', class: 'filter-dropdown'%>
       <%= f.input :radius, label: 'Max. radius (in km)', input_html: { value: @filter.radius } %>
+      <%= f.input :price, label: 'Max. price per night', input_html: { value: @filter.price } %>
+      <%= f.input :temperature, label: 'Max. temperature (in ºC)', input_html: { value: @filter.temperature } %>
+      <%= f.input :atmosphere, collection: ['oxygen', 'nitrogen', 'carbon_dioxide', 'argon'], label: false, prompt: 'Select your atmosphere', class: 'filter-dropdown', input_html: { value: @filter.atmosphere }%>
       <%= f.submit 'GO!', name: nil, class: 'red-btn' %>
     </div>
+  
     <% end %>
     </div>
   </div>

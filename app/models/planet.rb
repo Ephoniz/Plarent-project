@@ -6,7 +6,7 @@ class Planet < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 4 }
   validates :radius, presence: true
-  validates :atmosphere, presence: true, inclusion: { in: %w[oxygen nitrogen carbon_dioxide argon],
+  validates :atmosphere, presence: true, inclusion: { in: ['oxygen', 'nitrogen', 'carbon_dioxide', 'argon'],
                                                       message: "Not a valid atmosphere" }
   validates :galaxy, presence: true, inclusion: { in: %w[milkyway andromeda ic1101 tadpole],
                                                   message: "Not a valid galaxy" }
