@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'GoodTimes';
+  src: url('fonts/good times rg.ttf');
+}
 
 .topnav {
   display: flex;
@@ -13,4 +17,16 @@
 
 .title-plarent {
   color: #FF2C55;
+  font-size: 30px;
+  font-family: "good times";
+}
+
+.logo-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo-navbar img {
+  width: 50px;
+  margin-right: 10px;
 }

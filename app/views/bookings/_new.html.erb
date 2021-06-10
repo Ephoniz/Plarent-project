@@ -1,0 +1,19 @@
+<div id="booking-form">
+    <%= simple_form_for [@planet, @booking] do |f| %>
+    <%= f.input :date_start, as: :string, input_html: {type: :date}, id: 'date-start' %>
+    <%= f.input :date_end, as: :string, input_html: {type: :date} %>
+    
+    <div class="price-per-night">
+        <span>Price per night is: </span>
+        <span id="price-per-night"><%= @planet.price %></span><span> $</span>
+    </div>
+    <div class="total-days">
+        <span>Total days will be: </span>
+        <span id="days-booked">0<span>
+    </div>
+    <div class="total-price">
+        <span>Total price: </span><span id="total-price">0</span>
+    </div>
+    <%= f.submit "Book now", class: "btn-blue-transparent"%>
+    <% end %>
+</div>

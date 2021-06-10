@@ -3,7 +3,6 @@
 <div class="card-planet-page" style="background-image:linear-gradient(180deg, rgba(8, 14, 32, 0.36) 58.85%, #080E20 95.31%), url(<%= image_path 'mars.jpg' %>)">
   <h1> <%= @planet.name %></h1>
 </div>
-
 <div class="container d-flex">
   <div class="left p-4">
     <div class="card-carrousel carousel carousel-main">
@@ -16,9 +15,13 @@
 
     <div class="card-planet-text">
       <div class="container-owner border-bottom "> 
+<<<<<<< HEAD
+       <h3> <i class="fas fa-user-astronaut"></i> Book <%= @planet.name%> own by <%= @planet.owner.name %></h3>
+=======
        <h5> <i class="fas fa-user-astronaut"></i> Book <%= @planet.name%> host by <%= @planet.owner.first_name%>
 
        </h5>
+>>>>>>> f74bc6c1d1b57ae12311d8ac312e6f92c85b071a
       </div>
     <div class="card-information-planet">
       <div class="container-galaxy"> 
@@ -50,13 +53,5 @@
   </div>
 
 <div class="card-dates mt-4">
-<h2>BOOK NOW</h2>
-</div>
-
-
-
-
-
-</div>
-
+  <%= render 'bookings/new' %>
 </div>

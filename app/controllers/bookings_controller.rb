@@ -1,9 +1,4 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-    @planet = Planet.find(params[:planet_id])
-  end
-
   def create
     @planet = Planet.find(params[:planet_id])
     @booking = Booking.new(booking_params)
