@@ -16,9 +16,7 @@ class PlanetsController < ApplicationController
   end
 
   def create
-    @planet = Planet.new(planets_params)
-    @planet.owner = current_user
-
+    @planet = Planet.new(planets_params)  
     if @planet.save
       redirect_to @planet, notice: 'Planet was successfully created.'
     else
