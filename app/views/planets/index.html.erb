@@ -1,4 +1,5 @@
 <div id="wrapper">
+  <div class="index-container">
   <div id="gradient-background"></div>
   <%= video_tag 'space-galaxy.mp4', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
 
@@ -34,29 +35,10 @@
             <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
             <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
             </div>
-             <img src="<%= image_path("planet.png")  %>">
+             <%= cl_image_tag(p.photos.first.key)%>
           </div>
         <%end%>
       <% end %>
       </div>
-      <div class="col-9">
-        <div class="cards">
-          <% @planets.each do |p| %>
-            <%= link_to(p) do%>
-          <div class="card-planet">
-                <div class="card-planet-info ">
-                <h2> <%= p.name%> </h2> 
-                <p> <i class="fas fa-rocket"></i> <%= p.galaxy%></p> 
-                <p><i class="fas fa-globe"> </i> <%= p.radius%> Km </p>
-                <p><i class="fas fa-temperature-high"></i> <%=p.temperature%> ºC </p> 
-                <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
-                <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
-                </div>
-                <%= cl_image_tag(p.photos.first.key)%>
-              </div>
-            <%end%>
-          <% end %>
-          </div>
-        </div>
     </div>
 </div>

@@ -22,6 +22,7 @@ PHOTOS = ['https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Hypothetica
           'https://static.scientificamerican.com/sciam/cache/file/E130EEB0-A6BA-4DEA-A84BE1B861F44CE5_source.gif?w=590&h=800&D2E85F0E-2EF0-4885-A2B03F95387DDA0F',
           'https://media.wired.com/photos/5d04042aea706e48d9bcd1bf/master/w_2560%2Cc_limit/Science-Neptune-TA-PIA01492_orig.jpg']
 
+        
 
 user_et = User.new
   user_et.first_name = 'ET'
@@ -33,21 +34,6 @@ user_et = User.new
 
 file_profile = URI.open('https://www.unir.net/wp-content/uploads/2019/06/ET.jpg')
 user_et.profile_picture.attach(io: file_profile, filename: 'et.jpg', content_type: 'image/jpg')
-
-8.times do |index|
-  current_planet = Planet.create(name: Faker::Space.planet,
-                                  radius: Faker::Number.number(digits: 5),
-                                  atmosphere:  ATMOSPHERES.sample,
-                                  temperature: Faker::Number.decimal(l_digits: 2),
-                                  description: Faker::Movies::StarWars.quote,
-                                  galaxy: GALAXIES.sample,
-                                  price: Faker::Number.number(digits: 4),
-                                  owner: User.first,
-                                )
-  file = URI.open(PHOTOS[index])
-  current_planet.photos.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
-
-end
 
 user_martin = User.new
   user_martin.first_name = 'Martin'
@@ -122,3 +108,20 @@ planet_3.photos.attach(io: planet3, filename: 'nes.png', content_type: 'image/jp
 planet_3.photos.attach(io: planet32, filename: 'nes.png', content_type: 'image/jpg')
 planet_3.photos.attach(io: planet33, filename: 'nes.png', content_type: 'image/jpg')
 planet_3.photos.attach(io: planet34, filename: 'nes.png', content_type: 'image/jpg')
+
+
+8.times do |index|
+  current_planet = Planet.create(name: Faker::Space.planet,
+                                  radius: Faker::Number.number(digits: 5),
+                                  atmosphere:  ATMOSPHERES.sample,
+                                  temperature: Faker::Number.decimal(l_digits: 2),
+                                  description: Faker::Movies::StarWars.quote,
+                                  galaxy: GALAXIES.sample,
+                                  price: Faker::Number.number(digits: 4),
+                                  owner: User.first,
+                                )
+  file = URI.open(PHOTOS[index])
+  current_planet.photos.attach(io: file, filename: 'nes.png', content_type: 'image/jpg')
+
+end
+
