@@ -6,37 +6,36 @@
   <h2 class="index-title">These are all the planets we found for you <%=  params.dig(:search, :galaxy) %> </h2>
 
   <div class="index-main-container row">
-    <div class="col-2">
-      <div class="index-filters">
-      <h2>Filters</h2>
-
-      <%= simple_form_for :search, url: planets_path, method: :get do |f| %>
-      <div class="form-group filters-box">
-        <%= f.input :galaxy, collection: %w[milkyway andromeda ic1101 tadpole], label: false, prompt: 'Select your galaxy', class: 'filter-dropdown'%>
-        <%= f.input :radius, label: 'Max. radius (in km)', input_html: { value: @filter.radius } %>
-        <%= f.input :price, label: 'Max. price per night', input_html: { value: @filter.price } %>
-        <%= f.input :temperature, label: 'Max. temperature (in ºC)', input_html: { value: @filter.temperature } %>
-        <%= f.input :atmosphere, collection: ['oxygen', 'nitrogen', 'carbon_dioxide', 'argon'], label: false, prompt: 'Select your atmosphere', class: 'filter-dropdown', input_html: { value: @filter.atmosphere }%>
-        <%= f.submit 'GO!', name: nil, class: 'red-btn' %>
-      </div>
-    
+    <%= simple_form_for :search, url: planets_path, method: :get do |f| %>
+    <div class="form-group filters-box">
+      <%= f.input :galaxy, collection: %w[milkyway andromeda ic1101 tadpole], label: false, prompt: 'Select your galaxy', class: 'filter-dropdown'%>
+      <%= f.input :radius, label: 'Max. radius (in km)', input_html: { value: @filter.radius } %>
+      <%= f.input :price, label: 'Max. price per night', input_html: { value: @filter.price } %>
+      <%= f.input :temperature, label: 'Max. temperature (in ºC)', input_html: { value: @filter.temperature } %>
+      <%= f.input :atmosphere, collection: ['oxygen', 'nitrogen', 'carbon_dioxide', 'argon'], label: false, prompt: 'Select your atmosphere', class: 'filter-dropdown', input_html: { value: @filter.atmosphere }%>
+      <%= f.submit 'GO!', name: nil, class: 'red-btn' %>
+    </div>
+  
+    <% end %>
+    </div>
+  </div>
+  <div class="col-10">
+    <div class="cards">
+      <% @planets.each do |p| %>
+        <%= link_to(p) do%>
+       <div class="card-planet">
+            <div class="card-planet-info ">
+            <h2> <%= p.name%> </h2> 
+            <p> <i class="fas fa-rocket"></i> <%= p.galaxy%></p> 
+            <p><i class="fas fa-globe"> </i> <%= p.radius%> Km </p>
+            <p><i class="fas fa-temperature-high"></i> <%=p.temperature%> ºC </p> 
+            <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
+            <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
+            </div>
+             <%= cl_image_tag(p.photos.first.key)%>
+          </div>
+        <%end%>
       <% end %>
       </div>
     </div>
-    <div class="col-10">
-      <div class="cards">
-        <% @planets.each do |planet| %>
-          <%= link_to(planet) do%>
-          <div class="card-planet">
-            <img src="<%= image_path("planet.png")  %>" />
-            <div class="card-planet-info">
-              <h2> <%= planet.name%> </h2> 
-              <p>Welcome to the galaxy of <%= planet.galaxy%>. In this spacious planet of <%= planet.radius%> Km, with nice temperatures of <%=planet.temperature%> ºC you will fully enjoy the <%=planet.atmosphere%> atmosphere.</p>  
-            </div>
-          </div> 
-          <%end%>
-        <% end %>
-        </div>
-      </div>
-  </div>
 </div>
