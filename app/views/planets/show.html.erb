@@ -2,52 +2,45 @@
   <div id="gradient-background"></div>
   <%= video_tag 'SpaceGalaxy', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
 
-  <div class="card-planet-page">
-    <h1> <%= @planet.name %></h1>
-  </div>
+    <div class="index-background">
   <div class="container d-flex">
-    <div class="left p-4">
+    <div class="left p-4 flex-grow-1">
+       <div class="container-owner d-flex justify-content-between align-items-center"> 
+         <h3 class="m-0"> Book <span><%= @planet.name%></span> owned by <span> <%= @planet.owner.name %></span></h3>
+         <%= render 'shared/profile_pic', user: @planet.owner %>
+        </div>
       <div class="card-carrousel carousel carousel-main">
         <% @planet.photos.each do |photo| %>
             <img class ="w-100 h-100" src="<%= photo.url  %>"> 
         <% end %>
       </div>
-      
-
-
       <div class="card-planet-text">
-        <div class="container-owner border-bottom "> 
-        <h3> <i class="fas fa-user-astronaut"></i> Book <%= @planet.name%> own by <%= @planet.owner.name %></h3>
-        <%= render 'shared/profile_pic', user: @planet.owner %>
-        </div>
-      <div class="card-information-planet">
+      <div class="card-information-planet d-flex justify-content-between p-2">
         <div class="container-galaxy"> 
-        <h5> <i class="far fa-star"></i> Galaxy </h5>
-        <p><%= @planet.galaxy%></p>
+         <h5> <i class="far fa-star"></i> Galaxy </h5>
+         <p><%= @planet.galaxy%></p>
         </div>
         <div class="container-radius"> 
-        <h5> <i class="fas fa-globe"></i> Size </h5>
+         <h5> <i class="fas fa-globe"></i> Size </h5>
           <p><%= @planet.radius%> Km </p>
         </div>
         <div class="container-atmosphere"> 
-        <h5> <i class="fas fa-cloud"></i> Atmosphere</h5>
+         <h5> <i class="fas fa-cloud"></i> Atmosphere</h5>
           <p><%= @planet.atmosphere%></p>
         </div>
         <div class="container-temperature"> 
-        <h5><i class="fas fa-temperature-high"></i> Temperature </h5>
+         <h5><i class="fas fa-temperature-high"></i> Temperature </h5>
           <p><%= @planet.temperature%> ºC</p>
         </div>
         <div class="container-price"> 
-        <h5> <i class="fas fa-coins"></i> Price </h5>
+         <h5> <i class="fas fa-coins"></i> Price </h5>
           <p><%= @planet.price%> ¥ </p>
         </div>
-        <div class="container-description border-bottom "> 
-        <h5> <i class="fas fa-info-circle"></i> Description </h5>
+      </div>
+       <h5> <i class="fas fa-info-circle"></i> Description </h5>
           <p><%= @planet.description%></p>
-        </div>
       </div>
-      </div>
-
+    </div>
   <div class="card-dates mt-4">
     <%= render 'bookings/new' %>
   </div>
