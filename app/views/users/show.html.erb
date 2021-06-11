@@ -1,9 +1,9 @@
 
 <div class="profil-details">
-  <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+  <%= render "shared/profile_pic",  user: current_user%>
   <div class="profil-name-email">
-    <h2><%= current_user.name %></h2>
-    <h2><%= current_user.email %></h2>
+    <h2> Name: <%= current_user.name %></h2>
+    <h2>Email: <%= current_user.email %></h2>
     </div>
   </div>
 </div>
