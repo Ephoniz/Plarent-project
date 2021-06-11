@@ -21,15 +21,19 @@
   </div>
   <div class="col-10">
     <div class="cards">
-      <% @planets.each do |planet| %>
-        <%= link_to(planet) do%>
-        <div class="card-planet">
-          <img src="<%= image_path("planet.png")  %>" />
-          <div class="card-planet-info">
-            <h2> <%= planet.name%> </h2> 
-            <p>Welcome to the galaxy of <%= planet.galaxy%>. In this spacious planet of <%= planet.radius%> Km, with nice temperatures of <%=planet.temperature%> ºC you will fully enjoy the <%=planet.atmosphere%> atmosphere.</p>  
+      <% @planets.each do |p| %>
+        <%= link_to(p) do%>
+       <div class="card-planet">
+            <div class="card-planet-info ">
+            <h2> <%= p.name%> </h2> 
+            <p> <i class="fas fa-rocket"></i> <%= p.galaxy%></p> 
+            <p><i class="fas fa-globe"> </i> <%= p.radius%> Km </p>
+            <p><i class="fas fa-temperature-high"></i> <%=p.temperature%> ºC </p> 
+            <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
+            <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
+            </div>
+             <img src="<%= image_path("planet.png")  %>">
           </div>
-        </div> 
         <%end%>
       <% end %>
       </div>
