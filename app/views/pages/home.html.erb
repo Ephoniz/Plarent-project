@@ -31,7 +31,6 @@
       <div class="carousel-cell hvr-shrink">
         <%= link_to(p) do%> 
           <div class="card-planet">
-            <%= cl_image_tag(p.photos.first.key)  %>
             <div class="card-planet-info">
             <h2> <%= p.name%> </h2> 
             <p> <i class="fas fa-rocket"></i> <%= p.galaxy%></p> 
@@ -40,7 +39,7 @@
             <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
             <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
             </div>
-             <img src="<%= image_path("planet.png")  %>">
+             <%= cl_image_tag(p.photos.first.key)  %>
           </div>
         <%end%>
       </div>
