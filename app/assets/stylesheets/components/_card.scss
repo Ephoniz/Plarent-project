@@ -27,6 +27,7 @@
   font-size: 12px;
   margin-bottom: 0;
   margin-top: 0;
+  
 }
 
 .card-planet .card-planet-info {
@@ -101,12 +102,13 @@ justify-content: center;
 .card-carrousel{
 width: 100%;
 height: 247px;
-
-background: #FFFFFF;
+background:#1C2541;
 border-radius: 8px;
 overflow: hidden;
 img {
   object-fit: cover;
+  background: linear-gradient();
+
 }
 .is-selected {
   width: 100%;

@@ -4,11 +4,11 @@ class PlanetsController < ApplicationController
   def index
     @filter = PlanetFilter.new(params)
     @planets = @filter.filter!
+  
   end
 
   def show
     @booking = Booking.new
-    @user = @planet.owner
   end
 
   def new
@@ -16,9 +16,7 @@ class PlanetsController < ApplicationController
   end
 
   def create
-    @planet = Planet.new(planets_params)
-    
-
+    @planet = Planet.new(planets_params)  
     if @planet.save
       redirect_to @planet, notice: 'Planet was successfully created.'
     else

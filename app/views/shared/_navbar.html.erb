@@ -6,8 +6,8 @@
   <div class="navbar-buttons">
   <% if current_user.present? %>
     <%= link_to "Rent my planet", new_planet_path, class: 'red-btn'%>
-    <%= link_to  "My profile", user_path(current_user), class: 'red-btn' %>
-    <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'red-btn'%>
+    <%= link_to  "My profile", user_path(current_user), class: 'btn-red-transparent' %>
+    <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: 'btn-red-transparent'%>
     <%= render 'shared/profile_pic', user: current_user%>
   <% else %>
     <%= link_to  "Sign in", new_user_session_path, class: 'red-btn' %>

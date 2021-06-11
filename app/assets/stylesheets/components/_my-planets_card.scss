@@ -1,16 +1,51 @@
-.my-planets-card {
-   width: 100%;
-  color: black;
+// First box, details about the Users
+
+.profil-details {
+  width: 100%;
+  color: white;
+  background: #1C2541;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border-color: #1C2541;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+  padding: 20px;
+
+}
+
+.profil-details img {
   height: 180px;
-  background: #F5F5F5;
+  width: 180px;
+  border-radius: 50%;
+  border: 1px solid #FF2C55;
+  image-position: center;
+  image-fit: cover;
+  margin-right: 160px;
+}
+
+.profil-name-email {
+  font-size: 40px;
+  font-weight: bold;
+  position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+// Rented and owned planet
+
+.my-planets-card {
+  color: #1C2541;
+  height: 180px;
+  background: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 400px;
   margin: 20px;
-  border: #ACC0FF;
-
 }
 
 .my-planets-card {
@@ -19,6 +54,10 @@
   grid-template-columns:1fr 1fr;
   grid-gap: 28px;
   padding: 15px;
+}
+
+.profile-page .my-planets-card {
+  width: 100% !important;
 }
 @media(max-width: 992px) {
   .my-planets-card {
@@ -33,7 +72,7 @@
 }
 
 .my-planets-card:hover {
-  box-shadow: inset 0px 0px 15px #ff446a9f;
+  box-shadow: inset 0px 0px 30px #ff446a9f;
 }
 
 .my-planets-card img {
@@ -41,11 +80,7 @@
   height: 100%;
   width: 160px;
   object-fit: cover;
-
-}
-
-.header h1 {
-  color: white;
+  border-radius: 90%;
 }
 
 .my-planets-card  h2 {
@@ -65,20 +100,34 @@
   position: center;
   justify-content: center;
   align-items: center;
-
-}
-
-.my-planets-action p {
   color: #FF2C55;
   text-decoration: none;
 }
 
-.profile-container {
-  width: 60%;
-  margin: 30px auto;
+.header h1 {
+  width: 100%;
+  justify-content: center;
+  margin-top: 15px;
+  color: #FF2C55;
+
+}
+
+.cards-section {
+  width: 80%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-items: flex-end;
 }
 
+.profile-container {
+  width: 30%;
+  margin: 30px auto;
+  display: flex;
+}
+
+.carousel-cell {
+  margin: 10px;
+}
 
