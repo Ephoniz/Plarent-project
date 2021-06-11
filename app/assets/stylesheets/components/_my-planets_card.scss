@@ -1,19 +1,25 @@
+// background
+
+body {
+ background-image: url("https://images.unsplash.com/photo-1528484701073-2b22dc76649e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+ background-color: #cccccc;
+}
+
+
+
+
 // First box, details about the Users
 
 .profil-details {
   width: 100%;
   color: white;
-  background: #1C2541;
+  background: transparent;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-  border-color: #1C2541;
-  border-style: solid;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-top: 30px;
   padding: 20px;
-
 }
 
 .profil-details img {
@@ -27,7 +33,7 @@
 }
 
 .profil-name-email {
-  font-size: 40px;
+  font-size: 80px;
   font-weight: bold;
   position: center;
   justify-content: center;
@@ -37,15 +43,32 @@
 // Rented and owned planet
 
 .my-planets-card {
-  color: #1C2541;
-  height: 180px;
+ width: 100%;
+  color: black;
+  height: 200px;
   background: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   display: flex;
   align-items: center;
-  width: 400px;
-  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.my-planets-card {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.my-planets-card:hover, .my-planets-card:focus, .my-planets-card:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .my-planets-card {
@@ -71,9 +94,6 @@
   }
 }
 
-.my-planets-card:hover {
-  box-shadow: inset 0px 0px 30px #ff446a9f;
-}
 
 .my-planets-card img {
   padding-left: 10px;
@@ -108,7 +128,7 @@
   width: 100%;
   justify-content: center;
   margin-top: 15px;
-  color: #FF2C55;
+  color: white;
 
 }
 
@@ -129,5 +149,10 @@
 
 .carousel-cell {
   margin: 10px;
+}
+
+.my-planets-card:hover {
+  text-decoration: none;
+  box-shadow: inset 0px 0px 30px #ff789350;
 }
 
