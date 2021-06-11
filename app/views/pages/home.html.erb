@@ -1,21 +1,25 @@
-<div class="main-banner">
-  <div class="planet-one planet-two-float">
-    <img src="http://pngimg.com/uploads/mars_planet/mars_planet_PNG31.png" alt="Planet">
-  </div>
-  <div class="header-content">
-    <h1>Select the galaxy of your dreamed planet</h1>
-    <div class="header-input">
-      <%= simple_form_for :search, url: planets_path, method: :get do |f| %>
-      <div class="form-group d-flex input-size">
-        <%= f.input :galaxy, collection: %w[milkyway andromeda ic1101 tadpole], label: false, prompt: 'Select your galaxy'%>
-        <%= f.submit 'GO!', name: nil, class: 'red-btn', id: 'home-search'%>
+<div id="wrapper">
+  <div id="gradient-background"></div>
+    <%= video_tag 'SpaceGalaxy', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
+    <div class="main-banner">
+      <div class="planet-one planet-two-float">
+        <img src="http://pngimg.com/uploads/mars_planet/mars_planet_PNG31.png" alt="Planet">
       </div>
-      <% end %>
+      <div class="header-content">
+        <h1>Select the galaxy of your dreamed planet</h1>
+        <div class="header-input">
+          <%= simple_form_for :search, url: planets_path, method: :get do |f| %>
+          <div class="form-group d-flex input-size">
+            <%= f.input :galaxy, collection: %w[milkyway andromeda ic1101 tadpole], label: false, prompt: 'Select your galaxy'%>
+            <%= f.submit 'GO!', name: nil, class: 'red-btn', id: 'home-search'%>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="planet-two planet-float">
+        <img src="https://i.pinimg.com/originals/f3/7b/52/f37b5273252024d60d9bb5c73bccd627.png" alt="Planet">
+      </div>
     </div>
-  </div>
-  <div class="planet-two planet-float">
-    <img src="https://i.pinimg.com/originals/f3/7b/52/f37b5273252024d60d9bb5c73bccd627.png" alt="Planet">
-  </div>
 </div>
 
 <img src="https://avatanplus.ru/files/resources/original/5caa088570534169f8314954.png" alt="" class="comet" id="comet">

@@ -1,34 +1,37 @@
 .card-planet-text {
-  padding: 20px;
+
+  padding: 20px 0;
   
 }
 .card-planet-text  h5{
   word-spacing: 7px;
 }
 
-.card-planet-text p {
-display: flex;
-text-align: left;
-
-margin: 0 auto;
-left: 65px;
-top: 921px;
-font-family: Arial, Helvetica, sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 42px;
-
-color: #FFFFFF;
+.card-information-planet h5 {
+  font-size: 15px;
+  opacity: .5;
 }
+
+.card-information-planet p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .container-owner{
-  padding: 20px;
+  padding: 20px 0;
+  h3 {
+   color: #4c5b88;
+   font-size: 34px;
+  }
+  span {
+     color: white;
+  }
 }
 .card-information-planet{
-padding: 20px;
+
 }
 .card-information-planet p{
-  margin-left: 40px;
+
   padding-bottom: 10px;
 }
 
@@ -42,5 +45,8 @@ padding: 20px;
   border-radius: 50%;
   object-fit:cover;
   margin-left: 600px;
+}
 
+.show-page-container {
+  padding-top: 80px;
 }

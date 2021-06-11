@@ -1,3 +1,6 @@
+<div id="wrapper">
+  <div id="gradient-background"></div>
+  <%= video_tag 'space-nebula', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
 
 <div class="profil-details">
   <%= render "shared/profile_pic",  user: current_user%>
@@ -6,56 +9,55 @@
     <h2>Email: <%= current_user.email %></h2>
     </div>
   </div>
-</div>
 
-    <div class="profile-container">
-      <div class="header">
-        <h1>Owned Planets</h1>
-      </div>
-      </div>
+      <div class="profile-container">
+        <div class="header">
+          <h1>Owned Planets</h1>
+        </div>
+        </div>
 
 
-<div class="main-carousel profile-page">
-    <% current_user.planets.each do |planet|%>
-      <div class="carousel-cell">
-        <div class="my-planets-card">
-            <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
-            <div class="my-planets-card-content">
-              <div class="my-planets-text">
-                <h2><%= planet.name %></h2>
-                <p><%= planet.galaxy %></p>
-                <p><%= planet.description %></p>
+  <div class="main-carousel profile-page">
+      <% current_user.planets.each do |planet|%>
+        <div class="carousel-cell">
+          <div class="my-planets-card">
+              <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+              <div class="my-planets-card-content">
+                <div class="my-planets-text">
+                  <h2><%= planet.name %></h2>
+                  <p><%= planet.galaxy %></p>
+                  <p><%= planet.description %></p>
+                </div>
+                <div class="my-planets-card-actions">
+                  <%= link_to  "Delete", planet_path(planet), method: :delete, class: 'delete-text' %>
+                  <%= link_to  "Edit", edit_planet_path, class: 'edit-text' %>
+                </div>
               </div>
-              <div class="my-planets-card-actions">
-                <%= link_to  "Delete", planet_path(planet), method: :delete, class: 'delete-text' %>
-                <%= link_to  "Edit", edit_planet_path, class: 'edit-text' %>
+            </div>
+        </div>
+      <%end%>
+    </div>
+  <div class="profile-container">
+    <div class="header">
+      <h1>Rented Planets</h1>
+    </div>
+  </div>
+
+
+  <div class="main-carousel2 profile-page">
+      <% current_user.planets.each do |planet|%>
+        <div class="carousel-cell">
+          <div class="my-planets-card">
+              <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+              <div class="my-planets-card-content">
+                <div class="my-planets-text">
+                  <h2><%= planet.name %></h2>
+                  <p><%= planet.galaxy %></p>
+                  <p><%= planet.description %></p>
+                </div>
               </div>
             </div>
           </div>
       </div>
     <%end%>
   </div>
-<div class="profile-container">
-  <div class="header">
-    <h1>Rented Planets</h1>
-  </div>
-</div>
-
-
-<div class="main-carousel2 profile-page">
-    <% current_user.planets.each do |planet|%>
-      <div class="carousel-cell">
-        <div class="my-planets-card">
-            <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
-            <div class="my-planets-card-content">
-              <div class="my-planets-text">
-                <h2><%= planet.name %></h2>
-                <p><%= planet.galaxy %></p>
-                <p><%= planet.description %></p>
-              </div>
-            </div>
-          </div>
-      </div>
-    <%end%>
-  </div>
-slimg

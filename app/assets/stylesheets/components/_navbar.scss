@@ -4,13 +4,18 @@
 }
 
 .topnav {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
   display: flex;
-  background-color: #1C2541;
+  background-color: transparent;
   align-items: center;
-  overflow: hidden;
   height: 70px;
   padding-left: 30px;
   padding-right: 30px;
+  line-height: 50px;
+  z-index: 300;
 }
 
 /* Style the links inside the navigation bar */
@@ -29,9 +34,16 @@
 .logo-navbar {
   display: flex;
   align-items: center;
+  margin-right: 30px;
 }
 
 .logo-navbar img {
   width: 50px;
   margin-right: 10px;
+}
+
+.topnav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

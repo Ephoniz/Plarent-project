@@ -2,3 +2,32 @@
   background-color: #0C1223;
   color: white;
 }
+
+#wrapper {
+  margin: 0;
+}
+
+#myVideo {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#gradient-background {
+  background: rgb(8,15,32);
+  background: linear-gradient(0deg, rgba(8,15,32,1) 0%, rgba(8,15,32,0.7987570028011204) 39%, rgba(8,15,32,0.14049369747899154) 100%);
+  z-index: -50;
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
