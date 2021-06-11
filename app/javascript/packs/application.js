@@ -30,12 +30,12 @@ document.addEventListener('turbolinks:load', () => {
   });
 
     const elem2 = document.querySelector('.main-carousel2');
-  const flkty2 = new Flickity( elem2, {
+    const flkty2 = new Flickity( elem2, {
     // options
-  freeScroll: true,
-  wrapAround: true
+      freeScroll: true,
+      wrapAround: true
 
-  });
+      });
 
   const elem3 = document.querySelector('.carousel-main');
   const elemnav = document.querySelector('.carousel-nav');

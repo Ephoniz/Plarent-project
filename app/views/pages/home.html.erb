@@ -1,6 +1,6 @@
 <div id="wrapper">
   <div id="gradient-background"></div>
-    <%= video_tag 'SpaceGalaxy', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
+    <%= video_tag 'space-galaxy.mp4', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
     <div class="main-banner">
       <div class="planet-one planet-two-float">
         <img src="http://pngimg.com/uploads/mars_planet/mars_planet_PNG31.png" alt="Planet">
@@ -31,7 +31,7 @@
       <div class="carousel-cell hvr-shrink">
         <%= link_to(p) do%> 
           <div class="card-planet">
-            <div class="card-planet-info ">
+            <div class="card-planet-info">
             <h2> <%= p.name%> </h2> 
             <p> <i class="fas fa-rocket"></i> <%= p.galaxy%></p> 
             <p><i class="fas fa-globe"> </i> <%= p.radius%> Km </p>
@@ -39,7 +39,7 @@
             <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
             <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
             </div>
-             <img src="<%= image_path("planet.png")  %>">
+             <%= cl_image_tag(p.photos.first.key)  %>
           </div>
         <%end%>
       </div>

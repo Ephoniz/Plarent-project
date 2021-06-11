@@ -20,11 +20,13 @@
 .container-owner{
   padding: 20px 0;
   h3 {
-   color: #4c5b88;
+   text-shadow: 0 0 10px black;
+   color: rgb(211, 211, 211);
    font-size: 34px;
   }
   span {
-     color: white;
+     text-shadow: 0 0 5px black;
+     color: #00ffee;
   }
 }
 

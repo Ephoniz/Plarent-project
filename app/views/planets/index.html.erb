@@ -1,5 +1,8 @@
+<div id="wrapper">
+  <div class="index-container">
+  <div id="gradient-background"></div>
+  <%= video_tag 'space-galaxy.mp4', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
 
-<h2 class="index-title">These are all the planets in <%=  params.dig(:search, :galaxy) %> </h2>
 
 <div class="index-main-container row">
   <div class="col-3">
@@ -32,7 +35,7 @@
             <p><i class="fas fa-cloud"></i> <%=p.atmosphere%></p>
             <p><i class="fas fa-yen-sign"></i> <%=p.price%> per night </p>  
             </div>
-             <img src="<%= image_path("planet.png")  %>">
+             <%= cl_image_tag(p.photos.first.key)%>
           </div>
         <%end%>
       <% end %>

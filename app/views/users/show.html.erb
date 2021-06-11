@@ -1,27 +1,27 @@
 <div id="wrapper">
   <div id="gradient-background"></div>
-  <%= video_tag 'space-nebula', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
+  <%= video_tag 'space-nebula.mp4', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
 
-<div class="profil-details">
-  <%= render "shared/profile_pic",  user: current_user%>
-  <div class="profil-name-email">
-    <h2> Name: <%= current_user.name %></h2>
-    <h2>Email: <%= current_user.email %></h2>
+  <div class="profil-details">
+    <%= render "shared/profile_pic",  user: current_user%>
+    <div class="profil-name-email">
+      <h2><%= current_user.name %></h2>
+      <h2><%= current_user.email %></h2>
     </div>
   </div>
 
-      <div class="profile-container">
-        <div class="header">
-          <h1>Owned Planets</h1>
-        </div>
-        </div>
+  <div class="profile-container">
+    <div class="header">
+        <h1>Owned Planets</h1>
+    </div>
+  </div>
 
 
   <div class="main-carousel profile-page">
       <% current_user.planets.each do |planet|%>
         <div class="carousel-cell">
           <div class="my-planets-card">
-              <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
+              <%= cl_image_tag(planet.photos.first.key)%>
               <div class="my-planets-card-content">
                 <div class="my-planets-text">
                   <h2><%= planet.name %></h2>
@@ -44,20 +44,23 @@
   </div>
 
 
-  <div class="main-carousel2 profile-page">
-      <% current_user.planets.each do |planet|%>
-        <div class="carousel-cell">
-          <div class="my-planets-card">
-              <img src="/assets/planet-19a24a17cf09fe5b88012c58ce174660d02ee23cf659abada83953dd58e0ec66.png">
-              <div class="my-planets-card-content">
-                <div class="my-planets-text">
-                  <h2><%= planet.name %></h2>
-                  <p><%= planet.galaxy %></p>
-                  <p><%= planet.description %></p>
+    <div class="main-carousel2 profile-page">
+        <% current_user.bookings.each do |booking|%>
+          <div class="carousel-cell">
+            <div class="my-planets-card">
+                <%= cl_image_tag(booking.planet.photos.first.key)%>
+                <div class="my-planets-card-content">
+                  <div class="my-planets-text">
+                    <h2><%= booking.planet.name %></h2>
+                    <p><%= booking.planet.galaxy %></p>
+                    <p><%= booking.planet.description %></p>
+                    <p>Check in: <%= booking.date_start%></p>
+                    <p>Check out: <%= booking.date_end%></p>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
-      </div>
-    <%end%>
+        <%end%>
+    </div>
+
   </div>
