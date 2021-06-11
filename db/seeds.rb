@@ -56,7 +56,7 @@ planet_1 = Planet.create(name: 'Hoth',
                         atmosphere:  ATMOSPHERES.sample,
                         temperature: Faker::Number.decimal(l_digits: 2),
                         description: 'Hoth is an ice planet, where normally it is -200 Degrees. Its a great place for skiing, however you cant stay long because you will freeze',
-                        galaxy: GALAXIES.sample,
+                        galaxy: 'andromeda',
                         price: Faker::Number.number(digits: 4),
                         owner: User.last,
 )
@@ -78,7 +78,7 @@ planet_2 = Planet.create(name: 'Tatooine',
                         atmosphere:  ATMOSPHERES.sample,
                         temperature: Faker::Number.decimal(l_digits: 2),
                         description: 'Tatooine, is probably the greatest planet, its always has a perfect temperature of 34 degrees. You can spend there most of the year, because the people are really fun and there are many parties.',
-                        galaxy: GALAXIES.sample,
+                        galaxy: 'milkyway',
                         price: Faker::Number.number(digits: 4),
                         owner: User.last,
 )
@@ -95,11 +95,11 @@ planet33 = URI.open('https://angrystaffofficer.files.wordpress.com/2016/12/rogue
 planet34 = URI.open('https://cdnb.artstation.com/p/assets/images/images/004/230/583/medium/patrick-gladys-patrickgladys-22fix.jpg?1481568074')
 
 planet_3 = Planet.create(name: 'Scarif',
-                        radius: Faker::Number.number(digits: 5),
+                        radius: 100000,
                         atmosphere:  ATMOSPHERES.sample,
                         temperature: Faker::Number.decimal(l_digits: 2),
                         description: 'Scarif is the Miami of the planets, the biggest party planet there is. You can normally only go from May until Juli, because otherwise it is to hot !!!',
-                        galaxy: GALAXIES.sample,
+                        galaxy: 'andromeda',
                         price: Faker::Number.number(digits: 4),
                         owner: User.last,
 )
