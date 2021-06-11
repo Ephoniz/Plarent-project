@@ -1,6 +1,10 @@
-<div class="forms-container">
-  <div class="form-box">
-    <h2>Create new planet</h2>
-    <%= render 'shared/form', planet: @planet %>
+<div id="wrapper">
+<div id="gradient-background"></div>
+<%= video_tag 'space-nebula', autoplay: true, loop: true, muted: 'muted', id: 'myVideo' %>
+  <div class="forms-container">
+    <div class="form-box">
+      <h2>Create new planet</h2>
+      <%= render 'shared/form', planet: @planet %>
+    </div>
   </div>
 </div>
