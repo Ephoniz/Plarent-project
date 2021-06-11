@@ -32,4 +32,35 @@
   margin: 100px auto;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0;
+}
+
+#myVideo {
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+}
+
+#gradient-background {
+  background: #080F2033;
+  background: -webkit-radial-gradient(center, #080F2033, #080F20);
+  background: -moz-radial-gradient(center, #080F2033, #080F20);
+  background: radial-gradient(ellipse at center, #080F2033, #080F20);
+  z-index: -50;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
